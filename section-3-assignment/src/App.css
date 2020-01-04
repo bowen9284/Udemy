@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+.UserOutput {
+  margin: 10px 0;
+}
+
+ol {
+  text-align: left;
+}
