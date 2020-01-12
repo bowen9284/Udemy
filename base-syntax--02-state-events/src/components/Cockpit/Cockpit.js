@@ -2,16 +2,16 @@ import React, { useEffect } from 'react';
 import classes from './Cockpit.css';
 
 const cockpit = props => {
-  useEffect(() => {
-    console.log('[Cockpit.js] useEffect');
-    //http request could go here...
-    setTimeout(() => {
-      alert('Saved Data');
-    }, 1000);
-    return () => {
-      console.log('[Cockpit.js] cleanup in useEffect');
-    };
-  }, []);
+  // useEffect(() => {
+  //   console.log('[Cockpit.js] useEffect');
+  //   //http request could go here...
+  //   setTimeout(() => {
+  //     alert('Saved Data');
+  //   }, 1000);
+  //   return () => {
+  //     console.log('[Cockpit.js] cleanup in useEffect');
+  //   };
+  // }, []);
 
   useEffect(() => {
     console.log('[Cockpit.js] 2nd useEffect');
