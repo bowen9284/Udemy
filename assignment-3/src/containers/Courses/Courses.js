@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Course from '../Course/Course';
-import { Route, Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+
 import './Courses.css';
+import Course from '../Course/Course';
 
 class Courses extends Component {
   state = {

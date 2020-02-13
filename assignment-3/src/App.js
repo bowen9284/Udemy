@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
-import { Route, Switch, NavLink } from 'react-router-dom';
+import NotFound from './components/NotFound/NotFound';
+import { Route, Switch, NavLink, Redirect } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -22,9 +23,10 @@ class App extends Component {
         </ul>
 
         <Switch>
-          <Route path="/" component={Courses} />
-          <Route path="/users" component={Users} />
           <Route path="/courses" component={Courses} />
+          <Route path="/users" component={Users} />
+          <Redirect from="/all-courses" to="/courses" />
+          <Route component={NotFound} />
         </Switch>
       </div>
     );
