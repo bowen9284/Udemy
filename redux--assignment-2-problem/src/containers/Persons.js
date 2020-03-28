@@ -6,7 +6,6 @@ import AddPerson from '../components/AddPerson/AddPerson';
 import * as actions from '../store/actions';
 
 class Persons extends Component {
-
   render() {
     return (
       <div>
@@ -32,8 +31,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onPersonAddedHandler: () => dispatch({ type: actions.ADD_PERSON }),
-    onPersonDeletedHandler: id => dispatch({ type: actions.REMOVE_PERSON, personId: id })
+    onPersonAddedHandler: (name, age) =>
+      dispatch({ type: actions.ADD_PERSON, personData: { name, age: age } }),
+    onPersonDeletedHandler: id =>
+      dispatch({ type: actions.REMOVE_PERSON, personId: id })
   };
 };
 
